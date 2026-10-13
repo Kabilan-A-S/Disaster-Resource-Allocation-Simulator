@@ -1,0 +1,2 @@
+package disaster.util; import java.util.*; import disaster.resource.Resource;
+public class ResourceContainer<T extends Resource>{private final ArrayList<T> items=new ArrayList<>();public void add(T item){items.add(Objects.requireNonNull(item));}public T get(int i){return items.get(i);}public int size(){return items.size();}public T largest(){return items.stream().max(Comparator.comparingLong(Resource::getQuantity)).orElseThrow();}}

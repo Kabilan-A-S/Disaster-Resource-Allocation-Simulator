@@ -1,0 +1,2 @@
+package disaster.test; import org.junit.jupiter.api.*; import disaster.zone.Zone; import static org.junit.jupiter.api.Assertions.*;
+@Tag("golden") class ZoneTest {@BeforeAll static void init(){} Zone a;@BeforeEach void setup(){a=new Zone("A","Zone A",12000,5,5,8);}@Test @DisplayName("Zone A priority is critical")void priority(){assertEquals(300000,a.calculatePriority());assertEquals("CRITICAL",a.getPriorityLevel());}@Nested class Validation{@Test void invalidPopulation(){assertThrows(RuntimeException.class,()->new Zone("X","x",0,1,1,1));}}}

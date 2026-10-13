@@ -1,0 +1,5 @@
+# name|quantity
+Water|120000
+Food|130000
+Medicine|1500
+Fuel|1000

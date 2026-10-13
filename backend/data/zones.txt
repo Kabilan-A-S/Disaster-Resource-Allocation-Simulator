@@ -1,0 +1,5 @@
+# zoneId,zoneName,population,severity,medicalNeed,distanceKm
+1,chennai,3500,5,3,15
+2,avadi,25000,1,2,15
+3,kelambakkam,6500,1,2,15
+4,velachery,15000,4,5,15

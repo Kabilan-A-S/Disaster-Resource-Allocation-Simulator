@@ -1,0 +1,309 @@
+.configuration-content {
+  padding: 32px 48px 100px; /* Padding for sticky bottom bar */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.config-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.config-title h1 {
+  margin: 8px 0 6px;
+  font: 700 36px/1.22 'Space Grotesk', sans-serif;
+}
+.config-title > div > p:last-child {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.configuration-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+}
+
+.form-card {
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  background: var(--bg-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.card-heading h2 {
+  margin: 0 0 4px;
+  font: 700 20px 'Space Grotesk', sans-serif;
+}
+.card-heading p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.card-heading > span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid var(--accent-gold-dim);
+  border-radius: 50%;
+  color: var(--accent-gold);
+  font: 600 11px 'IBM Plex Mono', monospace;
+}
+
+/* Disaster Type Cards */
+.disaster-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.disaster-type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #34506b;
+  background: #0b1829;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+.disaster-type-card:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: var(--text-dim);
+}
+.disaster-type-card.selected {
+  border-color: var(--accent-gold);
+  background: rgba(215,181,110,0.08);
+  color: var(--text-main);
+  box-shadow: 0 0 16px rgba(215,181,110,0.12);
+}
+.dtc-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.dtc-icon {
+  color: var(--accent-gold);
+}
+.dtc-factor {
+  font-size: 10px;
+  color: var(--text-dim);
+  font-family: 'IBM Plex Mono', monospace;
+}
+.dtc-name {
+  font-size: 15px;
+  color: var(--text-main);
+}
+.dtc-desc {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+/* Form Layout */
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-field-group label {
+  color: var(--text-dim);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Stepper Input */
+.stepper-input-wrap {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border: 1px solid #34506b;
+  border-radius: 8px;
+  background: #0b1829;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.stepper-input-wrap:focus-within {
+  border-color: var(--accent-gold);
+}
+.stepper-btn {
+  width: 44px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s, color 0.15s;
+}
+.stepper-btn:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-main);
+}
+.stepper-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  font: 600 16px 'Space Grotesk', sans-serif;
+  text-align: center;
+  outline: none;
+}
+.stepper-unit {
+  padding-right: 14px;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+.field-helper {
+  margin: 4px 0 0;
+  color: var(--text-dim);
+  font-size: 11px;
+}
+.field-warning {
+  margin: 4px 0 0;
+  color: var(--color-critical);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Resource Grid */
+.resource-inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Scenario Preview Card */
+.scenario-preview-card {
+  height: fit-content;
+}
+.preview-metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.preview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.preview-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.preview-item-name {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.preview-item-counts {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.preview-item-counts strong {
+  color: var(--text-main);
+}
+.preview-progress-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #1c3149;
+  overflow: hidden;
+}
+.preview-progress-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+.preview-progress-bar.green { background: #83cbb4; }
+.preview-progress-bar.amber { background: #dfba68; }
+.preview-progress-bar.red { background: #f47b7e; }
+
+.preview-shortage-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #f47b7e;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.preview-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Sticky Bottom Action Bar */
+.sticky-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 272px; /* Sidebar width */
+  right: 0;
+  height: 72px;
+  background: rgba(9, 20, 35, 0.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-color);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+}
+.sticky-action-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media(max-width: 1200px) {
+  .configuration-content { padding: 24px 24px 90px; }
+  .configuration-grid { grid-template-columns: 1fr; }
+  .sticky-action-bar { left: 0; padding: 0 24px; }
+}
+@media(max-width: 760px) {
+  .configuration-content { padding: 20px 20px 140px; }
+  .disaster-types-grid { grid-template-columns: 1fr; }
+  .resource-inputs-grid { grid-template-columns: 1fr; }
+  .sticky-action-bar {
+    height: auto;
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sticky-action-bar-right { width: 100%; }
+  .sticky-action-bar-right button { flex: 1; }
+  .sticky-action-bar .btn-secondary { width: 100%; }
+}
